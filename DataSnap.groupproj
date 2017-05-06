@@ -1,0 +1,132 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{910A9647-B0CF-451E-9115-FED956842951}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Example01\Example01.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Example02\Example02.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Example03\Example03.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Example04\Example04.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Example05\Example05.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Example06\Example06.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Example07\mod_webbroker.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Example08\Example08.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Example09\Example09.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Example01">
+        <MSBuild Projects="Example01\Example01.dproj"/>
+    </Target>
+    <Target Name="Example01:Clean">
+        <MSBuild Projects="Example01\Example01.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Example01:Make">
+        <MSBuild Projects="Example01\Example01.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Example02">
+        <MSBuild Projects="Example02\Example02.dproj"/>
+    </Target>
+    <Target Name="Example02:Clean">
+        <MSBuild Projects="Example02\Example02.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Example02:Make">
+        <MSBuild Projects="Example02\Example02.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Example03">
+        <MSBuild Projects="Example03\Example03.dproj"/>
+    </Target>
+    <Target Name="Example03:Clean">
+        <MSBuild Projects="Example03\Example03.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Example03:Make">
+        <MSBuild Projects="Example03\Example03.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Example04">
+        <MSBuild Projects="Example04\Example04.dproj"/>
+    </Target>
+    <Target Name="Example04:Clean">
+        <MSBuild Projects="Example04\Example04.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Example04:Make">
+        <MSBuild Projects="Example04\Example04.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Example05">
+        <MSBuild Projects="Example05\Example05.dproj"/>
+    </Target>
+    <Target Name="Example05:Clean">
+        <MSBuild Projects="Example05\Example05.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Example05:Make">
+        <MSBuild Projects="Example05\Example05.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Example06">
+        <MSBuild Projects="Example06\Example06.dproj"/>
+    </Target>
+    <Target Name="Example06:Clean">
+        <MSBuild Projects="Example06\Example06.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Example06:Make">
+        <MSBuild Projects="Example06\Example06.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="mod_webbroker">
+        <MSBuild Projects="Example07\mod_webbroker.dproj"/>
+    </Target>
+    <Target Name="mod_webbroker:Clean">
+        <MSBuild Projects="Example07\mod_webbroker.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="mod_webbroker:Make">
+        <MSBuild Projects="Example07\mod_webbroker.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Example08">
+        <MSBuild Projects="Example08\Example08.dproj"/>
+    </Target>
+    <Target Name="Example08:Clean">
+        <MSBuild Projects="Example08\Example08.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Example08:Make">
+        <MSBuild Projects="Example08\Example08.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Example09">
+        <MSBuild Projects="Example09\Example09.dproj"/>
+    </Target>
+    <Target Name="Example09:Clean">
+        <MSBuild Projects="Example09\Example09.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Example09:Make">
+        <MSBuild Projects="Example09\Example09.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Example01;Example02;Example03;Example04;Example05;Example06;mod_webbroker;Example08;Example09"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Example01:Clean;Example02:Clean;Example03:Clean;Example04:Clean;Example05:Clean;Example06:Clean;mod_webbroker:Clean;Example08:Clean;Example09:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Example01:Make;Example02:Make;Example03:Make;Example04:Make;Example05:Make;Example06:Make;mod_webbroker:Make;Example08:Make;Example09:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

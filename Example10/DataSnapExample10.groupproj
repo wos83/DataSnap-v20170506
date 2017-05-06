@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9C458140-E0FD-4DD8-B833-DFBA6081C8D7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Server\AppServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Client\AppClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AppServer">
+        <MSBuild Projects="Server\AppServer.dproj"/>
+    </Target>
+    <Target Name="AppServer:Clean">
+        <MSBuild Projects="Server\AppServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppServer:Make">
+        <MSBuild Projects="Server\AppServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AppClient">
+        <MSBuild Projects="Client\AppClient.dproj"/>
+    </Target>
+    <Target Name="AppClient:Clean">
+        <MSBuild Projects="Client\AppClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppClient:Make">
+        <MSBuild Projects="Client\AppClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AppServer;AppClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AppServer:Clean;AppClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AppServer:Make;AppClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
