@@ -14,7 +14,8 @@ rem icacls %CD%\* /grant :r "Todos":(F,WDAC) /T
 
 set app=TreinamentoDataSnap
 set Destino=\
-set zipa=-air!*.zip -air!*.rar -air!*.local 7z.exe gdrive.exe curl.exe *.group* *.dpr* *.pas *.fmx *.dfm *.vsr *.dcr *.dpk *.res *.skin* *.ini *.bat *.txt *.ico *.dll *.xml *.htm* *.sql* *.log *.mes *.el* *.ep* *.vlb *.bmp *.png *.jp* *.pdf *.csv *.xls* *.js* *.cs* *.doc* *.sdb *.db3 *.sqlite *.fdb *.gdb *.inc *.cbk *.style *.dres *.rc *.key* *.mob* *.apk *.ipa *.cer *.bak *.deploy* *.ppt* *.doc* *.xls* *.dat *.reg *.chm *.dylib *.bpl *.hpp *.md *.ma* *.sc* *.cs* *.eot *.svg *.tt* *.wo* *.y* *.l* *.nu* *.ps* *.ed* *.es* *.inf* *.np*
+rem set zipa=-air!*.zip -air!*.rar -air!*.local 7z.exe gdrive.exe curl.exe *.group* *.dpr* *.pas *.fmx *.dfm *.vsr *.dcr *.dpk *.res *.skin* *.ini *.bat *.txt *.ico *.dll *.xml *.htm* *.sql* *.log *.mes *.el* *.ep* *.vlb *.bmp *.png *.jp* *.pdf *.csv *.xls* *.js* *.cs* *.doc* *.sdb *.db3 *.sqlite *.fdb *.gdb *.inc *.cbk *.style *.dres *.rc *.key* *.mob* *.apk *.ipa *.cer *.bak *.deploy* *.ppt* *.doc* *.xls* *.dat *.reg *.chm *.dylib *.bpl *.hpp *.md *.ma* *.sc* *.cs* *.eot *.svg *.tt* *.wo* *.y* *.l* *.nu* *.ps* *.ed* *.es* *.inf* *.np*
+set zipa=-axr*.zip -axr*.rar -axr*.local 7z.exe gdrive.exe curl.exe *.group* *.dpr* *.pas *.fmx *.dfm *.vsr *.dcr *.dpk *.res *.skin* *.ini *.bat *.txt *.ico *.dll *.xml *.htm* *.sql* *.log *.mes *.el* *.ep* *.vlb *.bmp *.png *.jp* *.pdf *.csv *.xls* *.js* *.cs* *.doc* *.sdb *.db3 *.sqlite *.fdb *.gdb *.inc *.cbk *.style *.dres *.rc *.key* *.mob* *.apk *.ipa *.cer *.bak *.deploy* *.ppt* *.doc* *.xls* *.dat *.reg *.chm *.dylib *.bpl *.hpp *.md *.ma* *.sc* *.cs* *.eot *.svg *.tt* *.wo* *.y* *.l* *.nu* *.ps* *.ed* *.es* *.inf* *.np*
 rem set zipa=-air!*.zip -air!*.rar -air!*.local 7z.exe gdrive.exe *.bat
 
 7z.exe a -tzip -mcu=on "%Backup%%app%_%pastaAtual%_BackupFull.zip" -r %zipa% -scsWIN

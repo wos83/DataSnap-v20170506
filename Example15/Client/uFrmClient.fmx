@@ -1,0 +1,31 @@
+object FrmClient: TFrmClient
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lstvEmployee: TListView
+    ItemAppearanceClassName = 'TEmptyItemObjects'
+    ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object btnGetEmployee: TButton
+    Align = Top
+    Size.Width = 320.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Get Employee'
+    OnClick = btnGetEmployeeClick
+  end
+end
